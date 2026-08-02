@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Book Generator</title>
+    <!-- Linking to the CSS folder -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Book Generator</h1>
+        <p>Powered by Open Library API.</p>
+        
+        <button id="generate-btn">Click Here for Random Book</button>
+        
+        <!-- Loading State -->
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Fetching a great book for you...</p>
+        </div>
+
+        <!-- Book Information Card -->
+        <div id="book-card" class="card hidden">
+            <div class="card-image">
+                <img id="book-cover" src="" alt="Book Cover">
+            </div>
+            <div class="card-content">
+                <h2 id="book-title">Book Title</h2>
+                <h3 id="book-author">By Author Name</h3>
+                
+                <div class="tags">
+                    <span id="book-genre" class="tag">Genre</span>
+                    <span id="book-date" class="tag">Published: Year</span>
+                </div>
+                
+                <p id="book-description">Description goes here.</p>
+                <button id="read-more-btn" class="read-more-link hidden">Read More</button>
+                
+                <a id="book-link" href="#" target="_blank" class="btn">View on Open Library</a>
+            </div>
+        </div>
+        
+        <!-- Error Message -->
+        <div id="error-message" class="hidden error">
+            <p>Oops! Couldn't fetch a book right now. Please try again.</p>
+        </div>
+    </div>
+
+    <!-- Linking to the JS folder -->
+    <script src="js/script.js"></script>
+</body>
+</html>
